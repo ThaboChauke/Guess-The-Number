@@ -1474,6 +1474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInput: {fileID: 509015268}
   gameLabel: {fileID: 191419576}
+  gameButton: {fileID: 1948907581}
   randomNumMin: 10
   randomNumMax: 33
 --- !u!4 &1957672507
