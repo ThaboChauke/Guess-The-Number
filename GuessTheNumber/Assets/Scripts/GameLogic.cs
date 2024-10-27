@@ -7,13 +7,17 @@ public class GameLogic : MonoBehaviour
     //public InputField userInput;
     public TMP_InputField userInput;
     public TMP_Text gameLabel;
-    public int randomNum;
+    private int randomNum;
+    public int randomNumMin;
+    public int randomNumMax;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        randomNum = 10;
-        gameLabel.text = "";
+        randomNum = GenerateRandomNumber(randomNumMin, randomNumMax);
+        gameLabel.text = "Guess a number between " + randomNumMin + " and " + randomNumMax;
     }
 
     // Update is called once per frame
@@ -45,8 +49,12 @@ public class GameLogic : MonoBehaviour
 
         else
         {
-            gameLabel.text = "Please Enter a Number";
+            gameLabel.text = "Please Enter a Number!";
         }
+    }
 
+    private int GenerateRandomNumber(int min,  int max)
+    {
+        return Random.Range(min, max);
     }
 }

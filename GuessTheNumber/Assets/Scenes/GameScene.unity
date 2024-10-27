@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 191419577}
   - component: {fileID: 191419576}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1473,7 +1473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: {fileID: 509015268}
-  randomNum: 0
+  gameLabel: {fileID: 191419576}
+  randomNumMin: 0
+  randomNumMax: 10
 --- !u!4 &1957672507
 Transform:
   m_ObjectHideFlags: 0
