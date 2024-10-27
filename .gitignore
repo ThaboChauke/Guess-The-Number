@@ -70,3 +70,80 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+# Build Folders
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider and ReSharper
+.idea/
+*.sln.iml
+
+# ASP.NET Core
+appsettings.json
+appsettings.*.json
+
+# LocalDB
+*.mdf
+*.ldf
+
+# Log files
+*.log
+
+# Npm Packages
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# NuGet Packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Generated files
+*.g.*
+*.g.i.*
+*.generated.cs
+
+# Publish output
+.publish/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Installer files
+*.msi
+*.exe
+*.dll
+*.pdb
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Backup files
+*.bak
+*.swp
+
+# JetBrains Rider
+.idea/
+
+# Azure Functions specific
+local.settings.json
