@@ -7,23 +7,35 @@ public class GameLogic : MonoBehaviour
     //public InputField userInput;
     public TMP_InputField userInput;
     public TMP_Text gameLabel;
+    public Button gameButton;
     private int randomNum;
     public int randomNumMin;
     public int randomNumMax;
+    private bool isGameWon;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        randomNum = GenerateRandomNumber(randomNumMin, randomNumMax);
-        gameLabel.text = "Guess a number between " + randomNumMin + " and " + randomNumMax;
+        ResetGame();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void ResetGame()
     {
-        
+        if (isGameWon)
+        {
+
+            gameLabel.text = "You Won! Guess a number between " + randomNumMin + " and " + (randomNumMax - 1);
+            isGameWon = false;
+        }
+        else
+        {
+            gameLabel.text = "Guess a number between " + randomNumMin + " and " + (randomNumMax - 1);
+        }
+        gameLabel.text = "";
+        randomNum = GenerateRandomNumber(randomNumMin, randomNumMax);
     }
 
     public void OnButtonClick()
@@ -36,6 +48,8 @@ public class GameLogic : MonoBehaviour
             if (answer == randomNum)
             {
                 gameLabel.text = "Correct!";
+                isGameWon = true;
+                ResetGame();
             }
             else if (answer > randomNum)
             {
@@ -46,7 +60,6 @@ public class GameLogic : MonoBehaviour
                 gameLabel.text = "Try Higher!";
             }
         }
-
         else
         {
             gameLabel.text = "Please Enter a Number!";

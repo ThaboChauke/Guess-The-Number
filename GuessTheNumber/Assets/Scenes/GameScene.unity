@@ -1474,8 +1474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInput: {fileID: 509015268}
   gameLabel: {fileID: 191419576}
-  randomNumMin: 0
-  randomNumMax: 10
+  randomNumMin: 10
+  randomNumMax: 33
 --- !u!4 &1957672507
 Transform:
   m_ObjectHideFlags: 0
